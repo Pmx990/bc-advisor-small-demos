@@ -1,1 +1,1 @@
-# bc-advisor-small-demos
+# Configure psql before you run the server
