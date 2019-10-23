@@ -1,12 +1,13 @@
+<!--
 <ul>
 {% for program in program_list %}
     <h1>{{program.program_text}}</h1>
     <h2>{{program.classes}}</h2>
+    
 {% endfor %}
 </ul>
 
-<!--  
-        Working in progress
+        Working in progress-->
 
 <form id="link">
 <lable for="action">Option:</lable>
@@ -16,17 +17,24 @@
     {% endfor %}
 
 </select>
-    <input onClick = "showClass()" class="SubmitButton" type="submit" name="SUBMITBUTTON" value="Submit" style="font-size:20px; "/>
+    <input type="button" id="btn" onclick="showClass()"value="Choose"/>
 </form>
-    <h2 id="class"> </h2>
+    <h2 id="showAllClass"> </h2>
 <script>
     function showClass(){
-        var $form = $(this),
+        var x = document.getElementById("selected");
+        //var classesText = x.options[x.selectedIndex].value;
+        var classesText = x.options[x.selectedIndex].value;
+        //var newClassText="";
+        //for (i = 0; i < classesText.length; i++)
+        //newClassText = newClassText + (classesText[i]);
+
+        /*var $form = $(this),
         $select = $form.find('select'),
         pro = $select.val();
-        document.getElementById("class").innerHTML = program.classes;
-        document.getElementById("class").innerHTML = "AAA";
+        document.getElementById("showAllClass").innerHTML = pro;*/
+        document.getElementById("showAllClass").innerHTML = classesText;
     }
 </script>
 
-    -->
+    
